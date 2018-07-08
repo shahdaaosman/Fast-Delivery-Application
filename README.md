@@ -58,14 +58,32 @@ mvn findbugs:findbugs
 
 # Run Checkstyle 
 
+CheckStyle code styling configuration files are in config/ directory. Maven checkstyle plugin is set to use google code style. You can change it to other styles like sun checkstyle. 
+
 To analyse this example using CheckStyle run 
 
 ```bash
 mvn checkstyle:check
 ```
 
+This will generate a report in XML format
 
-CheckStyle code styling configuration files are in config/ directory. Maven checkstyle plugin is set to use google code style. You can change it to other styles like sun checkstyle. 
+
+```bash
+target/checkstyle-checker.xml
+target/checkstyle-result.xml
+```
+
+and the folliowing command will generate a report in HTML format that you can open it using a Web browser. 
+
+```bash
+mvn checkstyle:checkstyle
+```
+
+```bash
+target/site/checkstyle.html
+```
+
 
 
 
