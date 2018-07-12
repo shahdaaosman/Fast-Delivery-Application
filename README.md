@@ -3,7 +3,6 @@
 This is a Java Maven Project Template
 
 
-
 # How to compile the project
 
 We use Apache Maven to compile and run this project. 
@@ -16,7 +15,7 @@ Type on the command line:
 mvn clean compile
 ```
 
-# How to create a binary runable package 
+# How to create a binary runnable package 
 
 
 ```bash
@@ -58,9 +57,10 @@ mvn findbugs:findbugs
 
 # Run Checkstyle 
 
-CheckStyle code styling configuration files are in config/ directory. Maven checkstyle plugin is set to use google code style. You can change it to other styles like sun checkstyle. 
+CheckStyle code styling configuration files are in config/ directory. Maven checkstyle plugin is set to use google code style. 
+You can change it to other styles like sun checkstyle. 
 
-To analyse this example using CheckStyle run 
+To analyze this example using CheckStyle run 
 
 ```bash
 mvn checkstyle:check
@@ -74,7 +74,7 @@ target/checkstyle-checker.xml
 target/checkstyle-result.xml
 ```
 
-and the folliowing command will generate a report in HTML format that you can open it using a Web browser. 
+and the following command will generate a report in HTML format that you can open it using a Web browser. 
 
 ```bash
 mvn checkstyle:checkstyle
@@ -83,11 +83,3 @@ mvn checkstyle:checkstyle
 ```bash
 target/site/checkstyle.html
 ```
-
-
-
-
-
-
-
-
