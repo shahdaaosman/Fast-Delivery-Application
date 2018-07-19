@@ -15,17 +15,21 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
 	  protected int driverId;
 	  protected String vehicleType;
 	  protected float driverDistance;
-	  protected int orderId;
 	  protected boolean hasFreezer;
 	  protected float totalDistance;
 	  protected float totalTime;
 	  protected String status;
-	 // protected ShopSubject shopdata;
+	  protected ShopSubject shopdata;
+	  protected int orderId;
 	  
 	  
 
 	@Override
 	public void update(int orderId, int homeDistance, int shopNo ,boolean needFreezer) {
+		this.orderId = orderId;
+		//for the totalDistance I need to add the user distance from order
+		this.totalDistance= homeDistance+ driverDistance;
+		this.totalTime = homeDistance+ driverDistance;
 		
        //display the output after each update
 		display();
@@ -35,10 +39,9 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
 
 	@Override
 	public void display() {
-		System.out.println("The status of drive:" + 
-		        + " , Price: " + price + " , Volume " + volume);	
-		
-		
+		System.out.println("Drive " + driverId + "has a"+ vehicleType + 
+				"his Distance from store"+ driverDistance+ "he has order number"+
+				orderId +"His status is "+ status);
 	}
 
     /**

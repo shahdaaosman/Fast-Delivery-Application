@@ -37,10 +37,8 @@ public class ShopSystem implements ShopSubject{
 		
 		   for (DriverObserver driverObserver : observerList) {
 			   driverObserver.update(orderData.getOrderId(),
-					   orderData.getHomeDistance(),orderData.getProducts(),
-					   orderData.getShopNo(), orderData.getStatus());
-			   
-			   //to pe completed ........
+					   orderData.getHomeDistance(),orderData.getShopNo(), 
+					   orderData.isNeedFreezer());
 			    }
 		
 	}

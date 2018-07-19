@@ -109,6 +109,23 @@ public class Order {
 	}
 
 	/**
+	 * Getter for need freezer method
+	 * @return
+	 */
+	public boolean isNeedFreezer() {
+		return needFreezer;
+	}
+	
+	/**
+	 * setter method for a need of freezer
+	 * 
+	 * @param needFreezer
+	 */
+	public void setNeedFreezer(boolean needFreezer) {
+		this.needFreezer = needFreezer;
+	}
+
+	/**
 	 * Getter for status
 	 * 
 	 * @return status
