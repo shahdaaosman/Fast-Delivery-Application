@@ -1,9 +1,9 @@
 package edu.bu.met.cs665;
 
-import edu.bu.met.cs665.example1.Person;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+import edu.bu.met.cs665.observable.Person;
 
 public class Main {
 

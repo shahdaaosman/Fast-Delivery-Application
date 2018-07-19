@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 import org.junit.Test;
 
-import edu.bu.met.cs665.example1.Person;
+import edu.bu.met.cs665.observable.Person;
 
 // Write some Unit tests for your program like the following. 
 
