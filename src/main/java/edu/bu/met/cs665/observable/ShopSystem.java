@@ -36,7 +36,7 @@ public class ShopSystem implements ShopSubject{
 	public void notifyObservers() {
 		
 		   for (DriverObserver driverObserver : observerList) {
-			   driverObserver.update(orderData.getCustomerId(),
+			   driverObserver.update(orderData.getOrderId(),
 					   orderData.getHomeDistance(),orderData.getProducts(),
 					   orderData.getShopNo(), orderData.getStatus());
 			   

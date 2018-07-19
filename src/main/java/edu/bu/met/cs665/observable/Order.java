@@ -11,24 +11,25 @@ import edu.bu.met.cs665.products.Product;
  */
 public class Order {
 
-	protected int customerId;
+	protected int orderId;
 	protected int homeDistance;
 	protected int shopNo;
 	protected List<Product> products;
+	protected boolean needFreezer;
 	protected String status;
 	
 	/**
 	 * Create An Order data based on attributes.
 	 * 
-	 * @param customerId
+	 * @param orderId
 	 * @param homeDistance
 	 * @param shopNo
 	 * @param products
 	 * @param status
 	 */
-	public Order(int customerId, int homeDistance, int shopNo, List<Product> products, String status) {
+	public Order(int orderId, int homeDistance, int shopNo, List<Product> products,boolean needFreezer, String status ) {
 		super();
-		this.customerId = customerId;
+		this.orderId = orderId;
 		this.homeDistance = homeDistance;
 		this.shopNo = shopNo;
 		this.products = products;
@@ -36,21 +37,21 @@ public class Order {
 	}
 
 	/**
-	 * Getter for customerId
+	 * Getter for orderId
 	 * 
-	 * @return customerId
+	 * @return orderId
 	 */
-	public int getCustomerId() {
-		return customerId;
+	public int getOrderId() {
+		return orderId;
 	}
 
 	/**
-	 * setter method for the customerId
+	 * setter method for the orderId
 	 * 
-	 * @param customerId
+	 * @param orderId
 	 */
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
+	public void setOrderId(int customerId) {
+		this.orderId = customerId;
 	}
 
 	/**
@@ -124,6 +125,8 @@ public class Order {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-
+ 
+	
+	//build need freezer method
 	
 }

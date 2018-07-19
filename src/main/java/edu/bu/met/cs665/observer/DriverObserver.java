@@ -6,5 +6,5 @@ import edu.bu.met.cs665.products.Product;
 
 public interface DriverObserver {
 
-	public void update(int customerId, int homeDistance, List<Product> product, int shopNo, String status);
+	public void update(int orderId, int homeDistance, int shopNo ,boolean needFreezer);
 }
