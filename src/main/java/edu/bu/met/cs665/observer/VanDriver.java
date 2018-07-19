@@ -21,5 +21,9 @@ public class VanDriver extends DeliveryDriver {
 		
 	}
 
+	public VanDriver() {
+		// TODO Auto-generated constructor stub
+	}
+
 	
 }

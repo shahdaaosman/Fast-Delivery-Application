@@ -20,4 +20,8 @@ public class TaxiDriver extends DeliveryDriver {
 		this.status = status ;
 		
 	}
+
+	public TaxiDriver() {
+		// TODO Auto-generated constructor stub
+	}
 }

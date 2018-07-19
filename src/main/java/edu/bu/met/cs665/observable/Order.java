@@ -16,7 +16,8 @@ public class Order {
 	protected int shopNo;
 	protected List<Product> products;
 	protected boolean needFreezer;
-	protected String status;
+	//Initialize order status
+	protected String status ="waiting" ;
 	
 	/**
 	 * Create An Order data based on attributes.
@@ -33,6 +34,7 @@ public class Order {
 		this.homeDistance = homeDistance;
 		this.shopNo = shopNo;
 		this.products = products;
+		this.needFreezer = needFreezer;
 		this.status = status;
 	}
 
