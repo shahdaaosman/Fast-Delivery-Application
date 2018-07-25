@@ -7,12 +7,12 @@ package edu.bu.met.cs665.observer;
  */
 public class VanDriver extends DeliveryDriver {
 
-	public VanDriver(float deiverDistance, boolean hasFreezer, int orderId, float totalDistance, float totalTime, String status) {
+	public VanDriver( int driverId, int driverDistance, boolean hasFreezer, int orderId, int totalDistance, int totalTime, String status) {
 		super();
 		// TODO Auto-generated constructor stub
-		this.driverId= 0;
+		this.driverId= driverId;
 		this.vehicleType="Van";
-		this.driverDistance = deiverDistance;
+		this.driverDistance = driverDistance;
 		this.hasFreezer = hasFreezer;
 		this.orderId = orderId;
 		this.totalDistance = totalDistance;

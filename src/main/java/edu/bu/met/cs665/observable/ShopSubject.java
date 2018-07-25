@@ -26,4 +26,7 @@ public interface ShopSubject {
 	   */
 	  public void notifyObservers();
 
+	  
+	
+
 }

@@ -14,19 +14,26 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
 
 	  protected int driverId;
 	  protected String vehicleType;
-	  protected float driverDistance;
+	  protected int driverDistance;
 	  protected boolean hasFreezer;
-	  protected float totalDistance;
-	  protected float totalTime;
+	  protected double totalDistance;
+	  protected double totalTime;
 	  protected String status;
 	  protected ShopSubject shopdata;
 	  protected int orderId;
+	  protected int shopNo;
+	  protected int distanceFromShop1;
+	  protected int distanceFromShop2;
+	  protected int distanceFromShop3;
+	  protected int distanceFromShop4;
+	  protected int distanceFromShop5;
 	  
 	  
 
 	@Override
 	public void update(int orderId, int homeDistance, int shopNo ,boolean needFreezer) {
 		this.orderId = orderId;
+		this.shopNo = shopNo;
 		//for the totalDistance I need to add the user distance from order
 		this.totalDistance= homeDistance+ driverDistance;
 		this.totalTime = homeDistance+ driverDistance;
@@ -39,9 +46,15 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
 
 	@Override
 	public void display() {
-		System.out.println("Drive " + driverId + "has a"+ vehicleType + 
-				"his Distance from store"+ driverDistance+ "he has order number"+
-				orderId +"His status is "+ status);
+		System.out.println("Drive " + driverId + " has a"+ vehicleType + 
+				" his Distance from store "+ driverDistance+ " he has order number "+
+				orderId +" his status is "+ status + 
+				", 1 : " +distanceFromShop1 +
+				", 2 : " +distanceFromShop2 +
+				", 3 : " +distanceFromShop3 +
+				", 4 : " +distanceFromShop4 +
+				", 5 : " +distanceFromShop5 
+				);
 	}
 
     /**
@@ -49,6 +62,7 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
      * Getter method for driver Id
      * @return driverId
      */
+	@Override
     public int getDriverId() {
 		return driverId;
 	}
@@ -83,7 +97,8 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
      * Getter method for driver Distance from the shop
      * @return driverDistance
      */
-	public float getDriverDistance() {
+	
+	public int getDriverDistance() {
 		return driverDistance;
 	}
 
@@ -91,8 +106,18 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
      * Setter method for driver distance from the shop
      * @param driverDistance
      */
-	public void setDriverDistance(float driverDistance) {
-		this.driverDistance = driverDistance;
+	public void setDriverDistance( int shopNo) {
+		if (shopNo == 1) {
+		    this.driverDistance = distanceFromShop1;
+		} else if (shopNo == 2) {
+			this.driverDistance = distanceFromShop2;
+		}else if (shopNo == 3) {
+			this.driverDistance = distanceFromShop3;
+		}else if (shopNo == 4) {
+			this.driverDistance = distanceFromShop4;
+		}else if (shopNo == 5) {
+			this.driverDistance = distanceFromShop5;
+		}
 	}
 
     /**
@@ -131,7 +156,7 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
      * Getter method for totalDistance
      * @return totalDistance
      */
-	public float getTotalDistance() {
+	public double getTotalDistance() {
 		return totalDistance;
 	}
 
@@ -147,7 +172,7 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
      * Getter method for totalTime
      * @return totalTime
      */
-	public float getTotalTime() {
+	public double getTotalTime() {
 		return totalTime;
 	}
 
@@ -173,6 +198,35 @@ public class DeliveryDriver implements DriverObserver , DriverStatusObserver {
      */
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+
+	
+	@Override
+	public void setDriverData(int distanceFromShop1, int distanceFromShop2, int distanceFromShop3,
+			int distanceFromShop4, int distanceFromShop5) {
+		// TODO Auto-generated method stub
+		this.distanceFromShop1 = distanceFromShop1;
+		this.distanceFromShop2 = distanceFromShop2;
+		this.distanceFromShop3 = distanceFromShop3;
+		this.distanceFromShop4 = distanceFromShop4;
+		this.distanceFromShop5 = distanceFromShop5;
+		
+	}
+	@Override
+	public int getDriverDistancFromShop( int shopNo) {
+		if (shopNo == 1) {
+		    this.driverDistance = distanceFromShop1;
+		} else if (shopNo == 2) {
+			this.driverDistance = distanceFromShop2;
+		}else if (shopNo == 3) {
+			this.driverDistance = distanceFromShop3;
+		}else if (shopNo == 4) {
+			this.driverDistance = distanceFromShop4;
+		}else if (shopNo == 5) {
+			this.driverDistance = distanceFromShop5;
+		}
+		return driverDistance;
 	}
 	
 	
