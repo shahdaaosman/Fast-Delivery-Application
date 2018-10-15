@@ -28,14 +28,14 @@ public class Order {
 	 * @param products
 	 * @param status
 	 */
-	public Order(int orderId, int homeDistance, int shopNo, List<Product> products,boolean needFreezer, String status ) {
+	public Order(int orderId, int homeDistance, int shopNo, List<Product> products,boolean needFreezer ) {
 		super();
 		this.orderId = orderId;
 		this.homeDistance = homeDistance;
 		this.shopNo = shopNo;
 		this.products = products;
 		this.needFreezer = needFreezer;
-		this.status = status;
+		this.status = "waiting";
 	}
 
 	/**
@@ -146,6 +146,6 @@ public class Order {
 	}
  
 	
-	//build need freezer method
+
 	
 }

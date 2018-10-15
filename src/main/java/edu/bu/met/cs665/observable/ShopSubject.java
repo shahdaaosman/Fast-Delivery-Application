@@ -22,9 +22,12 @@ public interface ShopSubject {
 	  public void removeObserver(DriverObserver driver);
 
 	  /**
-	   * Notify all observers.
+	   * Notify all observers and Select one.
 	   */
-	  public void notifyObservers();
+	//  public void notifyObservers();
+	  
+	  // it come instead of notifyObserver
+	  public void selectDriver();
 
 	  
 	

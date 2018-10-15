@@ -17,6 +17,7 @@ public class BirthdayGift extends Product{
 		super();
 		// TODO Auto-generated constructor stub
 		this.name = "BirthdayGift";
+		//the birthday gift is Free
 		this.price = 0.0;
 	
 	}
